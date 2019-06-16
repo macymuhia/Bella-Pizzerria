@@ -2,7 +2,7 @@
     
     @import url(bootstrap.css);
     @import url(fonts.css);
-    @import url('https://fonts.google.com/');
+    @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet');
     /* END IMPORTS */
     
     body {
@@ -41,4 +41,13 @@ transform: translate3d(0, 0, 0); */
         font-style: italic;
         color: #FFDAA6;
         border-bottom: 3px solid #FFDAA6;
+    }
+    
+    #logo {
+        font-family: 'Satisfy', cursive;
+        font-size: 24px;
+    }
+    
+    #logo:hover {
+        border: none;
     }
