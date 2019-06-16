@@ -1,108 +1,135 @@
-    /* IMPORTS */
-    
-    @import url(bootstrap.css);
-    @import url(fonts.css);
-    @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet');
-    /* END IMPORTS */
-    /* TO DELETE */
-    /* * {
+        /* IMPORTS */
+        
+        @import url(bootstrap.css);
+        @import url(fonts.css);
+        @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet');
+        /* END IMPORTS */
+        /* TO DELETE */
+        /* * {
         border: 1px solid red;
     } */
-    /* END TO DELETE */
-    
-    body {
-        background-image: url("../images/banner.png");
-        background-position: center;
-        background-size: contain;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        position: absolute;
-        min-width: 100%;
-        width: 100%;
-        min-height: 100%;
-        background-color: #FFDAA6;
-        /* z-index: 1;
+        /* END TO DELETE */
+        
+        body {
+            background-image: url("../images/banner.png");
+            background-position: center;
+            background-size: contain;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: absolute;
+            min-width: 100%;
+            width: 100%;
+            min-height: 100%;
+            background-color: #FFDAA6;
+            /* z-index: 1;
 transform: translate3d(0, 0, 0); */
-    }
-    
-    .container {
-        margin-top: 100px;
-    }
-    
-    .nav {
-        background-color: rgba(128, 93, 45, 0.712);
-        border-radius: 5px;
-        height: 50px;
-        justify-content: space-between;
-        margin: 0px 80px;
-        padding: 0px 20px;
-    }
-    
-    .nav-link {
-        color: beige;
-        font-size: 18px;
-    }
-    
-    .nav-link:hover {
-        font-style: italic;
-        color: #FFDAA6;
-        border-bottom: 3px solid #FFDAA6;
-    }
-    
-    .navbar-toggler {
-        color: #FFDAA6;
-    }
-    
-    #logo {
-        font-family: 'Satisfy', cursive;
-        font-size: 1.2em;
-        color: #FFDAA6;
-    }
-    
-    #logo:hover {
-        border: none;
-        color: beige;
-    }
-    
-    .jumbotron,
-    .carousel-item,
-    .carousel-item img {
-        background-color: rgba(128, 93, 45, 0.815);
-        border-radius: 5px;
-        height: 32em;
-        /* margin: 0px 80px; */
-        padding: 0px;
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .jumbotron {
-        margin-bottom: 60px;
-    }
-    
-    .jumbotron#menu {
-        height: max-content;
-    }
-    
-    #menu {
-        padding-top: 10px;
-    }
-    
-    #menu h1,
-    #menu h2 {
-        text-align: center;
-        color: #FFDAA6;
-    }
-    
-    .jumbotron .row {
-        color: beige;
-    }
-    
-    .menu-img {
-        width: 6em;
-        padding-left: 7px;
-    }
-    
-    div col .col-img {
-        max-width: 8em;
-    }
+        }
+        
+        .container {
+            margin-top: 100px;
+        }
+        
+        .nav {
+            background-color: rgba(128, 93, 45, 0.712);
+            border-radius: 5px;
+            height: 50px;
+            justify-content: space-between;
+            margin: 0px 80px;
+            padding: 0px 20px;
+        }
+        
+        .nav-link {
+            color: beige;
+            font-size: 18px;
+        }
+        
+        .nav-link:hover {
+            font-style: italic;
+            color: #FFDAA6;
+            border-bottom: 3px solid #FFDAA6;
+        }
+        
+        .navbar-toggler {
+            color: #FFDAA6;
+        }
+        
+        #logo {
+            font-family: 'Satisfy', cursive;
+            font-size: 1.2em;
+            color: #FFDAA6;
+        }
+        
+        #logo:hover {
+            border: none;
+            color: beige;
+        }
+        
+        .jumbotron,
+        .carousel-item,
+        .carousel-item img {
+            background-color: rgba(128, 93, 45, 0.89);
+            border-radius: 5px;
+            height: 32em;
+            /* margin: 0px 80px; */
+            padding: 0px;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .jumbotron {
+            margin-bottom: 60px;
+        }
+        
+        .jumbotron#menu {
+            height: max-content;
+        }
+        
+        #menu {
+            padding-top: 10px;
+        }
+        
+        #menu h1,
+        #menu h2 {
+            text-align: center;
+            color: #FFDAA6;
+        }
+        
+        .jumbotron .row {
+            color: beige;
+        }
+        
+        .menu-img {
+            width: 6em;
+            padding-left: 7px;
+        }
+        
+        div col .col-img {
+            max-width: 8em;
+        }
+        
+        .btn-primary {
+            color: rgb(128, 93, 45);
+            background-color: #FFDAA6;
+            border-radius: 5px;
+            border: 1px solid #FFDAA6;
+            ;
+            padding: 5px 10px;
+        }
+        
+        .btn-primary:hover {
+            color: #FFDAA6;
+            font-style: italic;
+            background-color: #806D53;
+            border: 1px solid #806D53;
+        }
+        
+        footer {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(128, 93, 45);
+            color: beige;
+            text-align: center;
+            border-radius: 5px;
+        }
