@@ -55,7 +55,7 @@ transform: translate3d(0, 0, 0); */
         
         #logo {
             font-family: 'Satisfy', cursive;
-            font-size: 1.2em;
+            font-size: 1.7em;
             color: #FFDAA6;
         }
         
@@ -80,16 +80,20 @@ transform: translate3d(0, 0, 0); */
             margin-bottom: 60px;
         }
         
-        .jumbotron#menu {
+        .jumbotron.menu,
+        .jumbotron.order {
             height: max-content;
         }
         
-        #menu {
+        .menu,
+        .order {
             padding-top: 10px;
         }
         
-        #menu h1,
-        #menu h2 {
+        .menu h1,
+        .menu h2,
+        .order h1,
+        .order h2 {
             text-align: center;
             color: #FFDAA6;
         }
@@ -123,6 +127,11 @@ transform: translate3d(0, 0, 0); */
             border: 1px solid #806D53;
         }
         
+        .checkout {
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        
         footer {
             position: relative;
             left: 0;
@@ -131,5 +140,4 @@ transform: translate3d(0, 0, 0); */
             background-color: rgb(128, 93, 45);
             color: beige;
             text-align: center;
-            border-radius: 5px;
         }

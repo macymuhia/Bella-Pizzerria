@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Bella Pizzeria</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -19,7 +19,7 @@
             <header>
                 <ul class="nav fixed-top">
                     <li class="nav-item">
-                        <a class="nav-link" id="logo" href="#">Bella Pizza</a>
+                        <a class="nav-link" id="logo" href="#">Bella Pizzeria</a>
                     </li>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                             <span class="navbar-toggler-icon"></span>
@@ -81,7 +81,7 @@
                     </div>
 
                 </div>
-                <div class="jumbotron" id="menu">
+                <div class="jumbotron menu">
                     <h1>Tantalizing Menu</h1>
                     <div class="row">
                         <div class="col">
@@ -147,37 +147,6 @@
                         </div>
 
                     </div>
-                    <!-- <hr>
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="row">
-                                <div class="col-md-3 col-img">
-                                    <img class="menu-img rounded-circle" src="images/meatball.jpeg" alt=""></div>
-                                <div class="col-md-6">
-                                    <h3>Cheezy MeatBaller</h3>
-                                    <p>Bacon strips, red onions, meat balls, Parmesan cheese & oregano</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <button id="" class="btn-primary">Order</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="row">
-                                <div class="col-md-3 col-img">
-                                    <img class="menu-img rounded-circle" src="images/fajita.jpeg" alt=""></div>
-                                <div class="col-md-6">
-                                    <h3>Fajita</h3>
-                                    <p>Grilled chicken, onions, green peppers, tomatoes & fresh garlic</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <button id="" class="btn-primary">Order</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div> -->
                     <hr>
                     <h2>Toppings</h2>
 
@@ -204,29 +173,159 @@
                         </div>
 
                     </div>
-
-
-
-
                 </div>
-            </main>
 
-            <footer>
-                <ul class="nav footer">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Phone:&nbsp; <em>0722 777 888</em></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Email:&nbsp; <em>hello@bellapizza.com</em></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">&COPY; 2019&nbsp; <em>Bella Pizza</em></a>
-                    </li>
-                </ul>
 
-            </footer>
+                <div class="jumbotron order">
+                    <h1>Orders</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-3 col-img">
+                                    <h3>Pizza</h3>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <select class="form-control" id="sel1">
+                                        <option>Hawaiian</option>
+                                        <option>Chicken & Garlic</option>
+                                        <option>BBQ Steak</option>
+                                        <option>Bella Special</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-3 col-img">
+                                    <h3>Size</h3>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <select class="form-control" id="sel1">
+                                        <option>Small</option>
+                                        <option>Regular</option>
+                                        <option>Medium</option>
+                                        <option>Large</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-3 col-img">
+                                    <h3>Crust</h3>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <select class="form-control" id="sel1">
+                                        <option>Crispy</option>
+                                        <option>Stuffed</option>
+                                        <option>Gluten Free</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-3 col-img">
+                                    <h3>Topping</h3>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <select class="form-control" id="sel1">
+                                        <option>Bacon and avocado</option>
+                                        <option>Black olives</option>
+                                        <option>Pineapple</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-3 col-img">
+                                    <h3>Quantity</h3>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="form-group">
+                                        <input placeholder="quantity" type="number" class="form-control" id="usr">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-3 col-img">
+                                </div>
+                                <div class="col-md-7">
+                                    <button id="" class="btn-primary">
+                                                Add to Cart &nbsp; 
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md-3 col-img">
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-3 col-img">
+                                </div>
+                                <div class="col-md-7">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="checkout">
+                        <button id="" class="btn-primary">
+                                Checkout &nbsp; 
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                    </div>
+                </div>
+
+
 
         </div>
+        </main>
+
+        <footer>
+            <ul class="nav footer">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Phone:&nbsp; <em>0722 777 888</em></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Email:&nbsp; <em>hello@bellapizza.com</em></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">&COPY; 2019&nbsp; <em>Bella Pizza</em></a>
+                </li>
+            </ul>
+
+        </footer>
+
+    </div>
     </div>
 
 </body>
