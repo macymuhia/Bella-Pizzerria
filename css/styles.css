@@ -91,6 +91,10 @@ transform: translate3d(0, 0, 0); */
             color: beige;
         }
         
+        .cart-icon {
+            display: none;
+        }
+        
         .jumbotron,
         .carousel-item,
         .carousel-item img {
@@ -108,19 +112,22 @@ transform: translate3d(0, 0, 0); */
         }
         
         .jumbotron.menu,
-        .jumbotron.order {
+        .jumbotron.order,
+        .modal {
             height: max-content;
         }
         
         .menu,
-        .order {
+        .order,
+        .modal {
             padding-top: 10px;
         }
         
         .menu h1,
         .menu h2,
         .order h1,
-        .order h2 {
+        .order h2,
+        .modal {
             text-align: center;
             color: #FFDAA6;
         }
@@ -157,6 +164,16 @@ transform: translate3d(0, 0, 0); */
         .checkout {
             padding-bottom: 20px;
             text-align: center;
+        }
+        
+        .modal-header,
+        .modal-body,
+        .modal-footer {
+            background-color: rgba(128, 93, 45, 0.89);
+        }
+        
+        .modal-body {
+            text-align: left;
         }
         
         footer {
