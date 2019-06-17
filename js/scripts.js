@@ -46,16 +46,19 @@ $(document).ready(function() {
     });
 
     // Getting user choices    
-
+    var cartItemsCount = 0;
     $("#add-to-cart").click(function() {
+        cartItemsCount++;
 
         var selectedPizza = document.getElementById("pizza").value;
         var selectedSize = document.getElementById("size").value;
         var selectedCrust = document.getElementById("crust").value;
         var selectedTopping = document.getElementById("topping").value;
-        var quantity = document.getElementById("qty").value;
+        var selectedQuantity = document.getElementById("qty").value;
 
-        $(".modal-body ul").append("<li>" + quantity + " " + selectedSize + " " + selectedPizza + " Pizza " + " (" + selectedCrust + ", " + selectedTopping + ")" + "</li>");
+        $(".cart-icon").show().append(cartItemsCount);
+
+        $(".modal-body ul").append("<li>" + selectedQuantity + " " + selectedSize + " " + selectedPizza + " Pizza " + " (" + selectedCrust + ", " + selectedTopping + ")" + "</li>");
     });
 
 
