@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="status"></div>
+    </div>
 
     <div class="background">
         <div class="container">
@@ -32,7 +35,7 @@
                         <a class="nav-link" href="#menu">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Order</a>
+                        <a class="nav-link" href="#order">Order</a>
                     </li>
                     <!-- </div> -->
                 </ul>
@@ -81,7 +84,7 @@
                     </div>
 
                 </div>
-                <div class="jumbotron menu">
+                <div class="jumbotron menu" id="menu">
                     <h1>Tantalizing Menu</h1>
                     <div class="row">
                         <div class="col">
@@ -176,7 +179,7 @@
                 </div>
 
 
-                <div class="jumbotron order">
+                <div class="jumbotron order" id="order">
                     <h1>Orders</h1>
                     <hr>
                     <div class="row">
@@ -187,7 +190,7 @@
                                 </div>
                                 <div class="col-md-6">
 
-                                    <select class="form-control" id="sel1">
+                                    <select class="form-control" id="pizza">
                                         <option>Hawaiian</option>
                                         <option>Chicken & Garlic</option>
                                         <option>BBQ Steak</option>
@@ -203,7 +206,7 @@
                                 </div>
                                 <div class="col-md-6">
 
-                                    <select class="form-control" id="sel1">
+                                    <select class="form-control" id="size">
                                         <option>Small</option>
                                         <option>Regular</option>
                                         <option>Medium</option>
@@ -223,7 +226,7 @@
                                 </div>
                                 <div class="col-md-6">
 
-                                    <select class="form-control" id="sel1">
+                                    <select class="form-control" id="crust">
                                         <option>Crispy</option>
                                         <option>Stuffed</option>
                                         <option>Gluten Free</option>
@@ -238,7 +241,7 @@
                                 </div>
                                 <div class="col-md-6">
 
-                                    <select class="form-control" id="sel1">
+                                    <select class="form-control" id="topping">
                                         <option>Bacon and avocado</option>
                                         <option>Black olives</option>
                                         <option>Pineapple</option>
