@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bella Pizzeria</title>
+    <link rel="shortcut icon" href="images/favicon.jpeg">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -35,6 +36,9 @@
                         <a class="nav-link" href="#menu">Menu</a>
                     </li>
                     <li class="nav-item">
+                        <div class="cart-icon">
+                            <i class="fa fa-shopping-cart nav-link"></i>
+                        </div>
                         <a class="nav-link" href="#order">Order</a>
                     </li>
                     <!-- </div> -->
@@ -94,7 +98,7 @@
                                 <div class="col-md-6">
                                     <h3>Hawaiian</h3>
                                     <p>Ham & Pineapple</p>
-                                    <button id="" class="btn-primary">
+                                    <button onclick="clickBtn()" class="btn-primary">
                                         Order &nbsp; 
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
@@ -108,7 +112,7 @@
                                 <div class="col-md-6">
                                     <h3>Chicken & Garlic Pizza</h3>
                                     <p>Chicken & cheese</p>
-                                    <button id="" class="btn-primary">
+                                    <button onclick="clickBtn()" class="btn-primary">
                                         Order &nbsp; 
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
@@ -127,7 +131,7 @@
                                 <div class="col-md-6">
                                     <h3>BBQ Steak</h3>
                                     <p>Steak & BBQ Sauce</p>
-                                    <button id="" class="btn-primary">
+                                    <button onclick="clickBtn()" class="btn-primary">
                                         Order &nbsp; 
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
@@ -141,7 +145,7 @@
                                 <div class="col-md-6">
                                     <h3>House Special</h3>
                                     <p>Meatballs & onions</p>
-                                    <button id="" class="btn-primary">
+                                    <button onclick="clickBtn()" class="btn-primary">
                                         Order &nbsp; 
                                         <i class="fa fa-shopping-cart"></i>
                                     </button>
@@ -191,10 +195,10 @@
                                 <div class="col-md-6">
 
                                     <select class="form-control" id="pizza">
-                                        <option>Hawaiian</option>
-                                        <option>Chicken & Garlic</option>
-                                        <option>BBQ Steak</option>
-                                        <option>Bella Special</option>
+                                        <option value="Hawaiian">Hawaiian</option>
+                                        <option value="Chicken & Garlic">Chicken & Garlic</option>
+                                        <option value="BBQ Steak">BBQ Steak</option>
+                                        <option value="Bella Special">Bella Special</option>
                                     </select>
                                 </div>
                             </div>
@@ -207,10 +211,10 @@
                                 <div class="col-md-6">
 
                                     <select class="form-control" id="size">
-                                        <option>Small</option>
-                                        <option>Regular</option>
-                                        <option>Medium</option>
-                                        <option>Large</option>
+                                        <option value="Small">Small</option>
+                                        <option value="Regular">Regular</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Large">Large</option>
                                     </select>
                                 </div>
                             </div>
@@ -227,9 +231,9 @@
                                 <div class="col-md-6">
 
                                     <select class="form-control" id="crust">
-                                        <option>Crispy</option>
-                                        <option>Stuffed</option>
-                                        <option>Gluten Free</option>
+                                        <option value="Crispy">Crispy</option>
+                                        <option value="Stuffed">Stuffed</option>
+                                        <option value="Gluten Free">Gluten Free</option>
                                     </select>
                                 </div>
                             </div>
@@ -242,9 +246,9 @@
                                 <div class="col-md-6">
 
                                     <select class="form-control" id="topping">
-                                        <option>Bacon and avocado</option>
-                                        <option>Black olives</option>
-                                        <option>Pineapple</option>
+                                        <option value="Bacon and avocado">Bacon and avocado</option>
+                                        <option value="Black olives">Black olives</option>
+                                        <option value="Pineapple">Pineapple</option>
                                     </select>
                                 </div>
                             </div>
@@ -262,7 +266,7 @@
                                 <div class="col-md-6">
 
                                     <div class="form-group">
-                                        <input placeholder="quantity" type="number" class="form-control" id="usr">
+                                        <input placeholder="quantity" value="1" min="1" type="number" class="form-control" id="qty">
                                     </div>
                                 </div>
                             </div>
@@ -272,10 +276,10 @@
                                 <div class="col-md-3 col-img">
                                 </div>
                                 <div class="col-md-7">
-                                    <button id="" class="btn-primary">
-                                                Add to Cart &nbsp; 
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </button>
+                                    <button type="button" class="btn-primary" id="add-to-cart">
+                                        Add to Cart &nbsp; 
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -301,14 +305,45 @@
                     </div>
                     <hr>
                     <div class="checkout">
-                        <button id="" class="btn-primary">
+                        <button id="checkout" class="btn-primary" type="button" data-toggle="modal" data-target="#myModal" data-color="orange">
                                 Checkout &nbsp; 
                                 <i class="fa fa-shopping-cart"></i>
                             </button>
                     </div>
                 </div>
 
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
 
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h2>Pizza shopping Cart</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <ul>
+
+                                </ul>
+
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn-primary add-pizza" data-dismiss="modal">
+                                                    Add pizza
+                                                </button>
+                                <button type="button" class="btn-primary" data-dismiss="modal">
+                                                    Make Order 
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
         </div>
         </main>
