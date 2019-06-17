@@ -56,10 +56,12 @@ $(document).ready(function() {
         var selectedTopping = document.getElementById("topping").value;
         var selectedQuantity = document.getElementById("qty").value;
 
-        $(".cart-icon").show().append(cartItemsCount);
+        $(".cart-icon").show();
+        $(".cart-counter").html(cartItemsCount);
 
         $(".modal-body ul").append("<li>" + selectedQuantity + " " + selectedSize + " " + selectedPizza + " Pizza " + " (" + selectedCrust + ", " + selectedTopping + ")" + "</li>");
     });
+
 
 
 });

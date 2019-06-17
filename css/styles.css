@@ -16,7 +16,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #4684ee;
+            background-color: #6e4b99;
             z-index: 999999;
             height: 100%;
             width: 100%;
@@ -96,7 +96,7 @@ transform: translate3d(0, 0, 0); */
         }
         
         .order-rem {
-            display: inline;
+            display: inline !important;
         }
         
         .jumbotron,
