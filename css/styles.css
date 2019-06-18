@@ -91,7 +91,8 @@ transform: translate3d(0, 0, 0); */
             color: beige;
         }
         
-        .cart-icon {
+        .cart-icon,
+        .delivery-place {
             display: none;
         }
         
