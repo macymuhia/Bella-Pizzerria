@@ -4,11 +4,7 @@ function Cart(name, size, crust, topping) {
     this.size = size;
     this.crust = crust;
     this.topping = topping;
-}
-
-function changeToNumber(elementId) {
-    inputToBeChanged = parseInt(getElementById(elementId).value);
-    return inputToBeChanged;
+    this.quantity = quantity;
 }
 
 function pizzaChoice() {
@@ -16,11 +12,12 @@ function pizzaChoice() {
     var pizzaSize = document.getElementById("size").value;
     var pizzaCrust = document.getElementById("crust").value;
     var pizzaTopping = document.getElementById("topping").value;
+    var pizzaQuantity = document.getElementById("quantity").value;
 
 
-    var myCart = new Cart(pizzaName, pizzaSize, pizzaCrust, pizzaTopping);
+    var myCart = new Cart(pizzaName, pizzaSize, pizzaCrust, pizzaTopping, pizzaQuantity);
 
-    myCartChoice = [myCart.name, myCart.size, myCart.crust, myCart.topping];
+    myCartChoice = [myCart.name, myCart.size, myCart.crust, myCart.topping, myCart.quantity];
 
     return myCartChoice;
 }
@@ -49,17 +46,19 @@ $(document).ready(function() {
     var cartItemsCount = 0;
     $("#add-to-cart").click(function() {
         cartItemsCount++;
+        $(".cart-icon").show();
+        $(".cart-counter").html(cartItemsCount);
+
 
         var selectedPizza = document.getElementById("pizza").value;
         var selectedSize = document.getElementById("size").value;
         var selectedCrust = document.getElementById("crust").value;
         var selectedTopping = document.getElementById("topping").value;
-        var selectedQuantity = document.getElementById("qty").value;
+        var selectedQuantity = parseInt(document.getElementById("quantity").value);
 
-        $(".cart-icon").show();
-        $(".cart-counter").html(cartItemsCount);
 
-        $(".modal-body ul").append("<li>" + selectedQuantity + " " + selectedSize + " " + selectedPizza + " Pizza " + " (" + selectedCrust + ", " + selectedTopping + ")" + "</li>");
+        $(".modal-body ul").append(
+            "<li>" + cartItemsCount + ". " + selectedQuantity + " " + selectedSize + " " + selectedPizza + " Pizza " + " (" + selectedCrust + ", " + selectedTopping + ")" + "</li>");
     });
 
 

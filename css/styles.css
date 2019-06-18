@@ -6,8 +6,8 @@
         /* END IMPORTS */
         /* TO DELETE */
         /* * {
-        border: 1px solid red;
-    } */
+            border: 1px solid red;
+        } */
         /* END TO DELETE */
         
         .preloader {
@@ -96,7 +96,11 @@ transform: translate3d(0, 0, 0); */
         }
         
         .order-rem {
-            display: inline !important;
+            display: inline;
+        }
+        
+        p.cart-counter {
+            display: inline;
         }
         
         .jumbotron,
@@ -176,8 +180,16 @@ transform: translate3d(0, 0, 0); */
             background-color: rgba(128, 93, 45, 0.89);
         }
         
+        .modal-header {
+            text-align: center;
+        }
+        
         .modal-body {
             text-align: left;
+        }
+        
+        .modal-body ul li {
+            list-style: none;
         }
         
         footer {
