@@ -58,21 +58,28 @@ $(document).ready(function() {
 
         var pizzaPrice = 0;
 
-        if (selectedSize === "small") {
+        if (selectedSize === "Small") {
             pizzaPrice = 900;
-        } else if (selectedSize === "regular") {
+        } else if (selectedSize === "Regular") {
             pizzaPrice = 1200;
-        } else if (selectedSize === "medium") {
+        } else if (selectedSize === "Medium") {
             pizzaPrice = 1500;
         } else {
             pizzaPrice = 1800;
         }
 
+        var pizza = [selectedPizza, selectedSize, selectedCrust, selectedTopping, selectedQuantity, pizzaPrice];
+
+
 
         $(".modal-body ul").append(
-            "<li>" + cartItemsCount + ". " + selectedQuantity + " " + selectedSize + " " + selectedPizza + " Pizza " + " (" + selectedCrust + ", " + selectedTopping + ")" + "</li>");
-        $(".modal-body .prices").append("Kshs. " + pizzaPrice);
-
+            '<li><div class="row"><div class="col-md-8">' +
+            cartItemsCount + ". " + pizza[4] + " " + pizza[1] + " " + pizza[0] + " Pizza " +
+            " (" + pizza[2] + ", " + pizza[3] + ")" +
+            '</div><div class="col-md-3">' + "Kshs. " + pizza[5] + '</div>' +
+            '<div class="col-md-1"><button id="cartItemsCount" type="button" class="close" data-dismiss="modal">&times;</button></div></div></li>');
+        // $(".modal-body .prices").html("Kshs. " + pizza[5]);
+        // $(".modal-body .btn-dismiss").append('<button id="cartItemsCount" type="button" class="close" data-dismiss="modal">&times;</button>');
     });
 
 
