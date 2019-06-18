@@ -59,6 +59,8 @@ $(document).ready(function() {
 
 
         var pizzaPrice = 0;
+        var totalPizzaPrice = [];
+
 
         if (selectedSize === "Small") {
             pizzaPrice = 900;
@@ -72,24 +74,21 @@ $(document).ready(function() {
 
         var pizza = [selectedPizza, selectedSize, selectedCrust, selectedTopping, selectedQuantity, pizzaPrice];
 
+        totalPizzaPrice.push(pizza[5]);
+
         $(".modal-body ul").append(
             '<li><div class="row"><div class="col-md-8">' +
             cartItemsCount + ". " + pizza[4] + " " + pizza[1] + " " + pizza[0] + " Pizza " +
             " (" + pizza[2] + ", " + pizza[3] + ")" +
             '</div><div class="col-md-3">' + "Kshs. " + pizza[5] + '</div>' +
             '<div class="col-md-1"><button id="cartItemsCount" type="button" class="close" data-dismiss="modal">&times;</button></div></div></li>');
-        // $(".modal-body .prices").html("Kshs. " + pizza[5]);
-        // $(".modal-body .btn-dismiss").append('<button id="cartItemsCount" type="button" class="close" data-dismiss="modal">&times;</button>');
 
-        if (ifDelivered === "Yes") {
-            $(".delivery-place").show();
-            deliveredPizzaPrice = totalPizzaPrice + 200;
-            $(".cart-counter").html(cartItemsCount);
+        var totalCartPrice = 0;
+        for (var i = 0; i < totalPizzaPrice.length; i++) {
+            totalCartPrice += totalPizzaPrice[i];
+            return totalCartPrice;
         }
-
-
+        $(".cart-total").html(totalCartPrice);
     });
-
-
 
 });
