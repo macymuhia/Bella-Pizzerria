@@ -56,9 +56,23 @@ $(document).ready(function() {
         var selectedTopping = document.getElementById("topping").value;
         var selectedQuantity = parseInt(document.getElementById("quantity").value);
 
+        var pizzaPrice = 0;
+
+        if (selectedSize === "small") {
+            pizzaPrice = 900;
+        } else if (selectedSize === "regular") {
+            pizzaPrice = 1200;
+        } else if (selectedSize === "medium") {
+            pizzaPrice = 1500;
+        } else {
+            pizzaPrice = 1800;
+        }
+
 
         $(".modal-body ul").append(
             "<li>" + cartItemsCount + ". " + selectedQuantity + " " + selectedSize + " " + selectedPizza + " Pizza " + " (" + selectedCrust + ", " + selectedTopping + ")" + "</li>");
+        $(".modal-body .prices").append("Kshs. " + pizzaPrice);
+
     });
 
 
